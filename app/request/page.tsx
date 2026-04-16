@@ -9,7 +9,7 @@ export default function RequestPage() {
 
   <a
     href="/"
-    className="text-2xl font-bold tracking-tight text-orange-400 transition hover:text-orange-300"
+    className="text-xl font-bold tracking-tight text-orange-400 transition hover:text-orange-300"
   >
     СтройКонтур
   </a>
@@ -111,7 +111,7 @@ export default function RequestPage() {
               />
             </div>
 
-            <div className="pt-2 flex justify-end">
+            <div className="pt-4 flex justify-end">
               <button
                 type="submit"
                 className="w-full rounded-xl bg-orange-500 px-6 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"

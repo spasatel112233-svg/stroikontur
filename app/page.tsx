@@ -27,7 +27,7 @@ export default function Home() {
               Новости
             </a>
             <a href="/about" className="transition hover:text-white">
-  О платформе
+  О нас 
 </a>
 
 <a href="/contacts" className="transition hover:text-white">

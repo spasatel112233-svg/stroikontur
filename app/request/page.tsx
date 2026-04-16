@@ -1,17 +1,17 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mx-auto max-w-2xl px-6 py-6 md:px-10 lg:px-12">
-        <div className="mb-8 flex items-center justify-between">
+      <div className="mx-auto max-w-2xl px-6 py-3 md:px-10 lg:px-12">
+        <div className="mb-6 flex items-center justify-between">
+  <a href="/" className="text-sm text-white/60 transition hover:text-white">
+    ← На главную
+  </a>
+
   <a
     href="/"
     className="text-2xl font-bold tracking-tight text-orange-400 transition hover:text-orange-300"
   >
     СтройКонтур
-  </a>
-
-  <a href="/" className="text-sm text-white/60 transition hover:text-white">
-    ← На главную
   </a>
 </div>
 

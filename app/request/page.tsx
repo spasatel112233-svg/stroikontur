@@ -1,7 +1,7 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mx-auto max-w-2xl px-6 py-2 md:px-10 lg:px-12">
+      <div className="mx-auto max-w-2xl px-6 py-6 md:px-10 lg:px-12">
         <div className="mb-6 px-2">
           <a
             href="/"
@@ -121,7 +121,7 @@ export default function RequestPage() {
               />
             </div>
 
-            <div className="pt-4 flex justify-end">
+            <div className="pt-4 pb-2 flex justify-end">
               <button
                 type="submit"
                 className="w-full rounded-xl bg-orange-500 px-6 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"

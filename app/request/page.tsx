@@ -2,14 +2,14 @@ export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="pt-4 flex justify-end">
-        <div className="mb-6 flex items-center justify-between">
-  <a href="/" className="text-sm text-white/60 transition hover:text-white">
+        <div className="mb-6 flex items-center justify-between px-2">
+  <a href="/" className="text-sm text-white/60 transition hover:text-white whitespace-nowrap">
     ← На главную
   </a>
 
   <a
     href="/"
-    className="text-xl font-bold tracking-tight text-orange-400 transition hover:text-orange-300"
+    className="text-lg font-bold tracking-tight text-orange-400 transition hover:text-orange-300 whitespace-nowrap"
   >
     СтройКонтур
   </a>

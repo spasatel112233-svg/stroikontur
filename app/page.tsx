@@ -29,18 +29,21 @@ export default function Home() {
           </nav>
 <div className="flex items-center gap-3">
   <a href="/login">
+    <button className="rounded-xl border border-orange-400 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+      Войти
+    </button>
+  </a>
+
+  <a href="/register">
+    <button className="rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-400">
+      Регистрация
+    </button>
+  </a>
+
   <button className="rounded-xl border border-orange-400 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
-    Войти
+    Оставить заявку
   </button>
-</a>
- <a href="/register">
-  <button className="rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-400">
-    Регистрация
-  </button>
-</a>
-          <button className="rounded-xl border border-orange-400 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
-            Оставить заявку
-          </button>
+</div>
         </header>
 
         <section className="grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">

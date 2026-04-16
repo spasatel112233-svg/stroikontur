@@ -1,7 +1,7 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mx-auto max-w-2xl px-6 py-3 md:px-10 lg:px-12">
+      <div className="pt-4 flex justify-end">
         <div className="mb-6 flex items-center justify-between">
   <a href="/" className="text-sm text-white/60 transition hover:text-white">
     ← На главную

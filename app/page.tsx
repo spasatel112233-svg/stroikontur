@@ -7,7 +7,7 @@ export default function Home() {
             СтройКонтур
           </div>
 
-          <nav className="hidden gap-6 text-sm text-white/80 md:flex">
+          <nav className="hidden gap-8 text-sm text-white/80 md:flex">
             <a href="/tenders" className="transition hover:text-white">
               Тендеры
             </a>

@@ -2,11 +2,18 @@ export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="mx-auto max-w-2xl px-6 py-6 md:px-10 lg:px-12">
-        <div className="mb-8">
-          <a href="/" className="text-sm text-white/60 transition hover:text-white">
-            ← На главную
-          </a>
-        </div>
+        <div className="mb-8 flex items-center justify-between">
+  <a
+    href="/"
+    className="text-2xl font-bold tracking-tight text-orange-400 transition hover:text-orange-300"
+  >
+    СтройКонтур
+  </a>
+
+  <a href="/" className="text-sm text-white/60 transition hover:text-white">
+    ← На главную
+  </a>
+</div>
 
         <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
           <div className="mb-6">
@@ -107,7 +114,7 @@ export default function RequestPage() {
             <div className="pt-2 flex justify-end">
               <button
                 type="submit"
-                className="w-full rounded-xl bg-orange-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"
+                className="w-full rounded-xl bg-orange-500 px-6 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"
               >
                 Отправить заявку
               </button>

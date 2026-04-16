@@ -8,23 +8,23 @@ export default function Home() {
           </div>
 
           <nav className="hidden gap-6 text-sm text-white/80 md:flex">
-            <a href="#services" className="transition hover:text-white">
-              Услуги
+            <a href="/tenders" className="transition hover:text-white">
+              Тендеры
             </a>
             <a href="/documents" className="transition hover:text-white">
               Документы
             </a>
-            <a href="/disputes" className="transition hover:text-white">
-              Споры
+            <a href="/orders" className="transition hover:text-white">
+              Заказы
+            </a>
+            <a href="/specialists" className="transition hover:text-white">
+              Специалисты
+            </a>
+            <a href="/companies" className="transition hover:text-white">
+              Компании
             </a>
             <a href="/news" className="transition hover:text-white">
               Новости
-            </a>
-            <a href="/ideas" className="transition hover:text-white">
-              Идеи
-            </a>
-            <a href="/tariffs" className="transition hover:text-white">
-              Тарифы
             </a>
           </nav>
 <div className="flex items-center gap-3">

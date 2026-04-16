@@ -22,7 +22,7 @@ export default function RequestPage() {
             </p>
           </div>
 
-          <form className="grid gap-4">
+          <form className="mt-6 grid gap-4">
             <div>
               <label className="mb-2 block text-sm text-white/80">Кто вы?</label>
               <select className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-orange-400">
@@ -68,7 +68,7 @@ export default function RequestPage() {
                 <label className="mb-2 block text-sm text-white/80">Страна</label>
                 <input
                   type="text"
-                  placeholder="Например: Россия, Турция, Казахстан"
+                  placeholder="Например: Россия"
                   className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-orange-400"
                 />
               </div>
@@ -107,7 +107,7 @@ export default function RequestPage() {
             <div className="pt-2 flex justify-end">
               <button
                 type="submit"
-                className="w-full rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"
+                className="w-full rounded-xl bg-orange-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"
               >
                 Отправить заявку
               </button>

@@ -1,21 +1,13 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="pt-4 flex justify-end">
-        <div className="mb-6 flex items-center justify-between px-2">
+      <div className="mb-6 px-2">
   <a href="/" className="text-sm text-white/60 transition hover:text-white whitespace-nowrap">
     ← На главную
   </a>
-
-  <a
-    href="/"
-    className="text-lg font-bold tracking-tight text-orange-400 transition hover:text-orange-300 whitespace-nowrap"
-  >
-    СтройКонтур
-  </a>
 </div>
-
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
+      
+<div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
           <div className="mb-6">
             <div className="mb-3 inline-flex rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-1 text-sm text-orange-300">
               Заявка на платформу

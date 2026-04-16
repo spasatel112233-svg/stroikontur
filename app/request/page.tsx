@@ -1,8 +1,8 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mx-auto max-w-2xl px-6 py-6 md:px-10 lg:px-12">
-        <div className="mb-6 px-2">
+      <div className="mx-auto max-w-2xl px-6 py-3 md:px-10 lg:px-12">
+        <div className="mb-4 px-2">
           <a
             href="/"
             className="text-sm text-white/60 transition hover:text-white whitespace-nowrap"
@@ -12,7 +12,7 @@ export default function RequestPage() {
         </div>
 
         <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
-          <div className="mb-6">
+          <div className="mb-5">
             <div className="mb-3 inline-flex rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-1 text-sm text-orange-300">
               Заявка на платформу
             </div>
@@ -27,7 +27,7 @@ export default function RequestPage() {
             </p>
           </div>
 
-          <form className="mt-6 grid gap-4">
+          <form className="mt-5 grid gap-4">
             <div>
               <label className="mb-2 block text-sm text-white/80">Кто вы?</label>
               <select className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-orange-400">
@@ -115,13 +115,13 @@ export default function RequestPage() {
                 Описание заявки
               </label>
               <textarea
-                rows={5}
+                rows={4}
                 placeholder="Опишите подробно, кого или что вы ищете"
                 className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-orange-400"
               />
             </div>
 
-            <div className="pt-4 pb-2 flex justify-end">
+            <div className="pt-3 flex justify-end">
               <button
                 type="submit"
                 className="w-full rounded-xl bg-orange-500 px-6 py-2 text-sm font-medium text-white transition hover:bg-orange-400 md:w-auto"

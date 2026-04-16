@@ -27,7 +27,14 @@ export default function Home() {
               Тарифы
             </a>
           </nav>
-
+<div className="flex items-center gap-3">
+  <button className="rounded-xl border border-orange-400 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+    Войти
+  </button>
+  <button className="rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-400">
+    Регистрация
+  </button>
+</div>
           <button className="rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-400">
             Оставить заявку
           </button>

@@ -26,13 +26,6 @@ export default function Home() {
             <a href="/news" className="transition hover:text-white">
               Новости
             </a>
-            <a href="/about" className="transition hover:text-white">
-  О нас 
-</a>
-
-<a href="/contacts" className="transition hover:text-white">
-  Контакты
-</a>
           </nav>
 <div className="flex items-center gap-3">
   <a href="/login">

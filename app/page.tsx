@@ -39,10 +39,11 @@ export default function Home() {
       Регистрация
     </button>
   </a>
-
+  <a href="/request">
   <button className="rounded-xl border border-orange-400 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
     Оставить заявку
   </button>
+</a>
 </div>
         </header>
 

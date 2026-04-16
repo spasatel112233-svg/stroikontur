@@ -1,20 +1,26 @@
 export default function RequestPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <div className="mb-6 px-2">
-  <a href="/" className="text-sm text-white/60 transition hover:text-white whitespace-nowrap">
-    ← На главную
-  </a>
-</div>
-      
-<div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
+      <div className="mx-auto max-w-2xl px-6 py-2 md:px-10 lg:px-12">
+        <div className="mb-6 px-2">
+          <a
+            href="/"
+            className="text-sm text-white/60 transition hover:text-white whitespace-nowrap"
+          >
+            ← На главную
+          </a>
+        </div>
+
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl md:p-6">
           <div className="mb-6">
             <div className="mb-3 inline-flex rounded-full border border-orange-400/30 bg-orange-400/10 px-4 py-1 text-sm text-orange-300">
               Заявка на платформу
             </div>
+
             <h1 className="text-3xl font-bold leading-tight md:text-4xl">
               Оставить заявку
             </h1>
+
             <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 md:text-sm">
               Оставьте информацию о себе и вашей задаче. Мы поможем найти
               специалистов, подрядчиков, компанию, работу или подходящий объект.
@@ -34,7 +40,9 @@ export default function RequestPage() {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm text-white/80">Имя / Компания</label>
+              <label className="mb-2 block text-sm text-white/80">
+                Имя / Компания
+              </label>
               <input
                 type="text"
                 placeholder="Введите имя или название компании"
@@ -44,7 +52,9 @@ export default function RequestPage() {
 
             <div className="grid gap-4 md:grid-cols-2">
               <div>
-                <label className="mb-2 block text-sm text-white/80">Телефон</label>
+                <label className="mb-2 block text-sm text-white/80">
+                  Телефон
+                </label>
                 <input
                   type="text"
                   placeholder="Введите телефон"
@@ -64,7 +74,9 @@ export default function RequestPage() {
 
             <div className="grid gap-4 md:grid-cols-2">
               <div>
-                <label className="mb-2 block text-sm text-white/80">Страна</label>
+                <label className="mb-2 block text-sm text-white/80">
+                  Страна
+                </label>
                 <input
                   type="text"
                   placeholder="Например: Россия"
@@ -73,7 +85,9 @@ export default function RequestPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm text-white/80">Город / Регион</label>
+                <label className="mb-2 block text-sm text-white/80">
+                  Город / Регион
+                </label>
                 <input
                   type="text"
                   placeholder="Введите город или регион"
@@ -83,9 +97,11 @@ export default function RequestPage() {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm text-white/80">Что вы ищете?</label>
+              <label className="mb-2 block text-sm text-white/80">
+Что вы ищете?
+              </label>
               <select className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-orange-400">
-<option>Подрядчика</option>
+                <option>Подрядчика</option>
                 <option>Специалистов</option>
                 <option>Компанию</option>
                 <option>Работу</option>
@@ -95,7 +111,9 @@ export default function RequestPage() {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm text-white/80">Описание заявки</label>
+              <label className="mb-2 block text-sm text-white/80">
+                Описание заявки
+              </label>
               <textarea
                 rows={5}
                 placeholder="Опишите подробно, кого или что вы ищете"

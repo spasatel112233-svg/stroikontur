@@ -1,16 +1,32 @@
 @import "tailwindcss";
-
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #f4f6f8;
+  --foreground: #0f172a;
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
-
-a {
-  text-decoration: none;
-}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;background:var(--background);color:var(--foreground);font-family:var(--font-geist-sans),Arial,Helvetica,sans-serif}
+a{text-decoration:none}
+.page-shell{@apply min-h-screen bg-slate-100 text-slate-900}
+.container-ui{@apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8}
+.site-header{@apply sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur}
+.nav-link{@apply text-sm font-medium text-slate-600 transition hover:text-slate-900}
+.nav-link-active{@apply text-sm font-semibold text-slate-900}
+.hero{@apply overflow-hidden rounded-[32px] bg-slate-950 text-white}
+.section-title{@apply text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl}
+.section-copy{@apply mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base}
+.surface{@apply rounded-[24px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)]}
+.soft-card{@apply rounded-[22px] border border-slate-200 bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.05)]}
+.pill{@apply inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-orange-600}
+.btn-primary{@apply inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600}
+.btn-secondary{@apply inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50}
+.kpi-card{@apply rounded-[22px] border border-white/10 bg-white/5 p-5 backdrop-blur}
+.input-ui{@apply h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-orange-400}
+.select-ui{@apply h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none transition focus:border-orange-400}
+.textarea-ui{@apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-orange-400}
+.status-badge{@apply inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700}
+.footer-link{@apply text-sm text-slate-500 transition hover:text-slate-900}

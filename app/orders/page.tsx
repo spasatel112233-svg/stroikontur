@@ -1,1 +1,92 @@
-import Link from "next/link"; import { PageIntro, SiteFooter, SiteHeader } from "@/components/site"; const cats=["Все категории","Монолит","Фасады","Электрика","Благоустройство","Опиловка","Поставка материалов","Аренда техники"]; const filters=['Страна','Город / регион','Категория','Бюджет','Сроки','Статус']; const orders=[{title:'Фасадные работы на жилом комплексе',text:'Нужен подрядчик на фасад, утепление и облицовку. Старт работ — в ближайшие 10 дней.',meta:'Турция · от 38 млн ₽ · 4 месяца',status:'Срочно'},{title:'Благоустройство дворовой территории',text:'Требуются дорожки, озеленение, освещение, малые формы и работы по ливневой системе.',meta:'Россия · от 11 млн ₽ · 45 дней',status:'Новый'},{title:'Инженерные сети производственного корпуса',text:'Нужен подрядчик на внутренние сети, вентиляцию, автоматику и пусконаладку.',meta:'Казахстан · по договору · 2 этапа',status:'VIP'},{title:'Опиловка и расчистка территории',text:'Нужна команда на санитарную обрезку, спил аварийных деревьев и вывоз порубочных остатков.',meta:'Россия · от 2,8 млн ₽ · 20 дней',status:'Горящий заказ'}]; export default function OrdersPage(){return <main className="page-shell"><SiteHeader active="/orders" /><PageIntro eyebrow="Заказы / Подряды" title="Заказы / Подряды" text="Здесь можно размещать и находить заказы, подряды, субподряды, коммерческие объекты, работы по благоустройству, поставкам, аренде и обслуживанию территорий." actions={<><Link href="/request" className="btn-primary">Разместить заказ</Link><Link href="/specialists" className="btn-secondary">Найти подрядчика</Link></>} /><section className="container-ui pb-12"><div className="surface p-5 sm:p-6"><div className="grid gap-3 lg:grid-cols-[2fr_repeat(6,1fr)_auto]"><input className="input-ui" placeholder="Что вы ищете: объект, подряд, вид работ, регион..." />{filters.map(item=><select key={item} className="select-ui"><option>{item}</option></select>)}<button className="btn-primary h-12">Найти</button></div></div></section><section className="container-ui py-4"><div className="flex flex-wrap gap-3">{cats.map((item,i)=><button key={item} className={i===0?'btn-primary px-4 py-2':'status-badge px-4 py-2 text-sm'}>{item}</button>)}</div></section><section className="container-ui py-10"><div className="grid gap-5 xl:grid-cols-2">{orders.map(item=><div key={item.title} className="soft-card"><div className="status-badge">{item.status}</div><h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900">{item.title}</h2><p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p><div className="mt-4 text-sm font-medium text-slate-700">{item.meta}</div><div className="mt-6 flex flex-wrap gap-3"><Link href="/request" className="btn-secondary px-4 py-2">Подробнее</Link><Link href="/request" className="btn-primary px-4 py-2">Откликнуться</Link></div></div>)}</div></section><section className="container-ui py-10"><div className="surface p-6 sm:p-8"><h2 className="section-title">Проекты и чертежи</h2><p className="section-copy">Загрузите проект или чертёж и получите готовую визуализацию для обсуждения, согласования и презентации.</p><div className="mt-8 flex flex-wrap gap-3"><Link href="/request" className="btn-primary">Загрузить проект</Link><Link href="/request" className="btn-secondary">Загрузить чертёж</Link></div></div></section><SiteFooter /></main>}
+import Link from 'next/link';
+import { PageTitle } from '../../components/PageTitle';
+
+const orders = [
+  ['Срочно', 'Фасадные работы на жилом комплексе', 'Нужен подрядчик на фасад, утепление и облицовку. Старт работ — в ближайшие 10 дней.', 'Турция · от 38 млн ₽ · 4 месяца'],
+  ['Новый', 'Благоустройство дворовой территории', 'Требуются дорожки, озеленение, освещение, малые формы и работы по ливневой системе.', 'Россия · от 11 млн ₽ · 45 дней'],
+  ['VIP', 'Инженерные сети производственного корпуса', 'Ищем подрядчика на внутренние сети, вентиляцию, автоматику и пусконаладку.', 'Казахстан · по договору · 2 этапа']
+];
+
+export default function OrdersPage() {
+  return (
+    <main className="page-shell">
+      <div className="container">
+        <PageTitle
+          title="Заказы / Подряды"
+          lead="Здесь можно размещать и находить заказы, подряды, субподряды, коммерческие объекты, работы по благоустройству, поставкам, аренде и обслуживанию территорий."
+          actions={<>
+            <Link href="/orders/create" className="btn btn--primary">Разместить заказ</Link>
+            <Link href="/request/find-specialist" className="btn">Найти подрядчика</Link>
+          </>}
+        />
+
+        <section className="section">
+          <div className="filters">
+            <input className="input" placeholder="Что вы ищете: объект, подряд, вид работ, регион..." />
+            <select className="select"><option>Страна</option></select>
+            <select className="select"><option>Город / регион</option></select>
+            <select className="select"><option>Категория</option></select>
+            <select className="select"><option>Бюджет</option></select>
+            <select className="select"><option>Сроки</option></select>
+            <select className="select"><option>Статус</option></select>
+            <button className="btn btn--primary">Найти</button>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="pills">
+            <span className="pill pill--active">Все категории</span>
+            <span className="pill">Монолит</span>
+            <span className="pill">Фасады</span>
+            <span className="pill">Электрика</span>
+            <span className="pill">Благоустройство</span>
+            <span className="pill">Опиловка</span>
+            <span className="pill">Поставка материалов</span>
+            <span className="pill">Аренда техники</span>
+          </div>
+        </section>
+
+        <section className="section surface-section surface-section--warm" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 24 }}>
+          <div>
+            <div className="section-header">
+              <div>
+                <h2 className="section-title">Актуальные заказы</h2>
+                <p className="section-copy">Подборка заказов и подрядов по строительству, благоустройству, инженерии и сервисным работам.</p>
+              </div>
+            </div>
+            <div className="cards-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+              {orders.map(([tag, title, text, meta]) => (
+                <article key={title} className="order-card">
+                  <div className="order-card__top"><span className="badge badge--soft">{tag}</span></div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <div className="order-card__meta muted-copy" style={{ marginTop: 18 }}>{meta}</div>
+                  <div className="order-card__bottom">
+                    <Link href="/request/order-response" className="btn btn--small">Подробнее</Link>
+                    <Link href="/request/order-response" className="btn btn--primary btn--small">Откликнуться</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="card" style={{ padding: 0, overflow: 'hidden', background: 'linear-gradient(160deg,#10204a,#061127)', minHeight: 420 }}>
+            <div className="svg-visual--fit" aria-hidden>
+              <svg viewBox="0 0 600 420" width="100%" height="100%">
+                <rect width="600" height="420" fill="transparent"/>
+                <rect x="210" y="184" width="118" height="176" rx="14" fill="#10204a" stroke="#2a3b67" />
+                <rect x="332" y="214" width="70" height="146" rx="14" fill="#12254b" />
+                <line x1="144" y1="116" x2="420" y2="116" stroke="#dbe4f0" strokeOpacity="0.22" strokeWidth="8" strokeLinecap="round" />
+                <line x1="334" y1="116" x2="398" y2="162" stroke="#dbe4f0" strokeOpacity="0.28" strokeWidth="5" strokeLinecap="round" />
+                <line x1="334" y1="116" x2="302" y2="284" stroke="#dbe4f0" strokeOpacity="0.24" strokeWidth="5" strokeLinecap="round" />
+                <line x1="252" y1="116" x2="252" y2="374" stroke="#dbe4f0" strokeOpacity="0.22" strokeWidth="6" strokeLinecap="round" />
+                <rect x="40" y="304" width="520" height="74" rx="20" fill="#0e1b3b" opacity="0.45" />
+                <rect x="72" y="338" width="252" height="16" rx="8" fill="#ff7a00" opacity="0.85" />
+                <rect x="72" y="314" width="132" height="12" rx="6" fill="#fff" opacity="0.18" />
+              </svg>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}

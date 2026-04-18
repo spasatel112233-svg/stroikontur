@@ -1,1 +1,26 @@
-import Link from "next/link"; export default function RequestPage(){return <main className="min-h-screen bg-slate-100 text-slate-900"><div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 lg:px-8"><div className="mb-5 px-1"><Link href="/" className="text-sm text-slate-500 transition hover:text-slate-900">← На главную</Link></div><div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)] sm:p-8"><div className="pill">Заявка на платформу</div><h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900">Оставить заявку</h1><p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">Оставьте информацию о себе и задаче. Мы поможем найти специалистов, подрядчиков, компанию, материалы, технику или подходящий объект.</p><form className="mt-8 grid gap-4"><div><label className="mb-2 block text-sm font-medium text-slate-700">Кто вы?</label><select className="select-ui"><option>Заказчик</option><option>Подрядчик</option><option>Специалист</option><option>Компания</option><option>Ищу работу</option></select></div><input type="text" placeholder="Имя / Компания" className="input-ui" /><div className="grid gap-4 md:grid-cols-2"><input type="text" placeholder="Телефон" className="input-ui" /><input type="email" placeholder="Email" className="input-ui" /></div><div className="grid gap-4 md:grid-cols-2"><input type="text" placeholder="Страна" className="input-ui" /><input type="text" placeholder="Город / регион" className="input-ui" /></div><select className="select-ui"><option>Что вы ищете?</option><option>Подрядчика</option><option>Специалистов</option><option>Компанию</option><option>Работу</option><option>Объект / заказ</option><option>Тендер</option></select><textarea rows={4} placeholder="Кратко опишите задачу" className="textarea-ui" /><div className="flex justify-end pt-2"><button type="submit" className="btn-primary">Отправить заявку</button></div></form></div></div></main>}
+import { FormPage } from '../../components/FormPage';
+import Link from 'next/link';
+
+export default function RequestPage() {
+  return (
+    <FormPage
+      badge="Заявка на платформу"
+      title="Оставить заявку"
+      lead="Оставьте информацию о себе и задаче. Мы поможем найти специалиста, подрядчика, компанию, материалы, технику или подходящий объект."
+    >
+      <div className="form-grid">
+        <div className="span-2"><label className="form-label">Кто вы?</label><select className="select"><option>Заказчик</option><option>Подрядчик</option><option>Специалист</option><option>Компания</option></select></div>
+        <input className="input span-2" placeholder="Имя / Компания" />
+        <input className="input" placeholder="Телефон" />
+        <input className="input" placeholder="Email" />
+        <input className="input" placeholder="Страна" />
+        <input className="input" placeholder="Город / регион" />
+        <select className="select span-2"><option>Что вы ищете?</option><option>Подрядчика</option><option>Специалиста</option><option>Компанию</option><option>Материалы</option></select>
+        <textarea className="textarea span-2" placeholder="Кратко опишите задачу" />
+      </div>
+      <div className="action-row" style={{ justifyContent: 'flex-end' }}>
+        <Link href="#" className="btn btn--primary">Отправить заявку</Link>
+      </div>
+    </FormPage>
+  );
+}

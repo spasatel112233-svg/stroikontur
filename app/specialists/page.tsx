@@ -1,1 +1,55 @@
-import Link from "next/link"; import { PageIntro, SiteFooter, SiteHeader } from "@/components/site"; const specialists=[{name:'Прораб / монолит',text:'12 лет опыта, промышленные и жилые объекты, готовность к командировкам.',meta:'Россия / СНГ · Русский / Английский'},{name:'Инженер ПТО / сметчик',text:'Исполнительная документация, КС-2 / КС-3, сопровождение объектов и расчёты.',meta:'Удалённо / офис · Россия / Казахстан'},{name:'Бригада фасадчиков',text:'Мокрый фасад, вентилируемый фасад, утепление и реставрационные работы.',meta:'Компания / бригада · 20+ человек'},{name:'Электромонтажная команда',text:'Внутренние сети, щитовое оборудование, освещение и пусконаладка.',meta:'Россия · Выездные объекты'}]; export default function SpecialistsPage(){return <main className="page-shell"><SiteHeader active="/specialists" /><PageIntro eyebrow="Специалисты" title="Специалисты" text="Находите специалистов по строительным, инженерным, сметным и эксплуатационным направлениям." actions={<><Link href="/request" className="btn-primary">Найти специалиста</Link><Link href="/register" className="btn-secondary">Создать профиль</Link></>} /><section className="container-ui pb-12"><div className="surface p-5 sm:p-6"><div className="grid gap-3 lg:grid-cols-[2fr_repeat(4,1fr)_auto]"><input className="input-ui" placeholder="Профессия, специализация, регион..." />{['Страна','Город / регион','Специализация','Формат работы'].map(item=><select key={item} className="select-ui"><option>{item}</option></select>)}<button className="btn-primary h-12">Найти</button></div></div></section><section className="container-ui py-8"><div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-4">{specialists.map(item=><div key={item.name} className="soft-card"><div className="h-14 w-14 rounded-2xl bg-slate-100" /><h2 className="mt-5 text-xl font-semibold text-slate-900">{item.name}</h2><p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p><div className="mt-4 text-sm font-medium text-slate-700">{item.meta}</div><div className="mt-6 flex gap-3"><Link href="/request" className="btn-secondary px-4 py-2">Подробнее</Link><Link href="/request" className="btn-primary px-4 py-2">Связаться</Link></div></div>)}</div></section><SiteFooter /></main>}
+import Link from 'next/link';
+import { PageTitle } from '../../components/PageTitle';
+
+const profiles = [
+  ['ПМ', 'Прораб / монолит', '12 лет опыта, промышленные и жилые объекты, готовность к командировкам.', 'Россия / СНГ · Русский / Английский'],
+  ['ПТО', 'Инженер ПТО / сметчик', 'Исполнительная документация, КС-2 / КС-3, сопровождение объектов и расчёты.', 'Удалённо / офис · Россия / Казахстан'],
+  ['Ф', 'Бригада фасадчиков', 'Мокрый фасад, вентилируемый фасад, утепление и реставрационные работы.', 'Компания / бригада · 20+ человек'],
+  ['Э', 'Электромонтажная команда', 'Внутренние сети, щитовое оборудование, освещение и пусконаладка.', 'Россия · выездные объекты']
+];
+
+export default function SpecialistsPage() {
+  return (
+    <main className="page-shell">
+      <div className="container">
+        <PageTitle
+          badge="Специалисты"
+          title="Специалисты"
+          lead="Находите специалистов по строительным, инженерным, сметным и эксплуатационным направлениям."
+          actions={<>
+            <Link href="/request/find-specialist" className="btn btn--primary">Найти специалиста</Link>
+            <Link href="/register" className="btn">Создать профиль</Link>
+          </>}
+        />
+
+        <section className="section">
+          <div className="filters" style={{ gridTemplateColumns: '1.5fr repeat(4, minmax(0, 1fr)) auto' }}>
+            <input className="input" placeholder="Профессия, специализация, регион..." />
+            <select className="select"><option>Страна</option></select>
+            <select className="select"><option>Город / регион</option></select>
+            <select className="select"><option>Специализация</option></select>
+            <select className="select"><option>Формат работы</option></select>
+            <button className="btn btn--primary">Найти</button>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="cards-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+            {profiles.map(([mark, title, text, meta]) => (
+              <article key={title} className="profile-card">
+                <div className="profile-card__avatar">{mark}</div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <div className="profile-card__meta muted-copy" style={{ marginTop: 16 }}>{meta}</div>
+                <div className="profile-card__bottom">
+                  <Link href="/specialists" className="btn btn--small">Подробнее</Link>
+                  <Link href="/request/specialist-contact" className="btn btn--primary btn--small">Связаться</Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}

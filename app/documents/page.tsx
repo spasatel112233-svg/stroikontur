@@ -1,1 +1,65 @@
-import Link from "next/link"; import { PageIntro, SiteFooter, SiteHeader } from "@/components/site"; const categories=['Акты','КС-2','КС-3','Договоры','Претензии','Жалобы','Уведомления','Иски']; const docs=['Акт выполненных работ','КС-2','КС-3','Претензия по оплате','Договор подряда','Уведомление о сдаче работ','Журнал производства работ','Дополнительное соглашение']; export default function DocumentsPage(){return <main className="page-shell"><SiteHeader active="/documents" /><PageIntro eyebrow="Документы" title="Документы" text="Шаблоны договоров, актов, КС-2, КС-3, претензий и других документов для работы с заказчиком и подрядчиком." actions={<><Link href="/request" className="btn-primary">Получить документ</Link><Link href="/disputes" className="btn-secondary">Решить спор</Link></>} /><section className="container-ui pb-12"><div className="surface p-5 sm:p-6"><div className="grid gap-3 lg:grid-cols-[2fr_220px_220px]"><input className="input-ui" placeholder="Поиск по документам..." /><select className="select-ui"><option>Все категории</option></select><button className="btn-primary h-12">Найти</button></div></div></section><section className="container-ui py-8"><div className="grid gap-6 xl:grid-cols-[260px_1fr_360px]"><aside className="surface p-6"><h2 className="text-lg font-semibold text-slate-900">Категории</h2><div className="mt-5 grid gap-3">{categories.map(item=><div key={item} className="status-badge justify-center px-4 py-2 text-sm">{item}</div>)}</div></aside><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{docs.map(item=><div key={item} className="soft-card"><div className="status-badge">Документ</div><h3 className="mt-4 text-xl font-semibold text-slate-900">{item}</h3><p className="mt-3 text-sm leading-7 text-slate-600">Готовая форма для работы по строительным проектам и сопровождения сделок.</p><Link href="/request" className="mt-6 inline-flex text-sm font-semibold text-orange-600">Открыть</Link></div>)}</div><aside className="surface p-6"><h2 className="text-2xl font-bold text-slate-900">Получить документ</h2><p className="mt-3 text-sm leading-7 text-slate-600">Заполните данные по задаче, и мы подготовим нужный документ под ваш кейс.</p><div className="mt-6 grid gap-4"><input className="input-ui" placeholder="Ваше имя" /><input className="input-ui" placeholder="Компания" /><input className="input-ui" placeholder="Договор / объект" /><textarea rows={5} className="textarea-ui" placeholder="Кратко опишите задачу" /><button className="btn-primary w-full">Отправить запрос</button></div></aside></div></section><SiteFooter /></main>}
+import Link from 'next/link';
+import { PageTitle } from '../../components/PageTitle';
+
+const docs = [
+  'Акт выполненных работ', 'КС-2', 'КС-3', 'Претензия по оплате', 'Договор подряда', 'Уведомление о сдаче работ'
+];
+const cats = ['Акты', 'КС-2', 'КС-3', 'Договоры', 'Претензии', 'Жалобы', 'Уведомления', 'Иски'];
+
+export default function DocumentsPage() {
+  return (
+    <main className="page-shell">
+      <div className="container">
+        <PageTitle
+          badge="Документы"
+          title="Документы"
+          lead="Шаблоны договоров, актов, КС-2, КС-3, претензий и других документов для работы с заказчиком и подрядчиком."
+          actions={<>
+            <Link href="/request/document-request" className="btn btn--primary">Получить документ</Link>
+            <Link href="/disputes" className="btn">Решить спор</Link>
+          </>}
+        />
+
+        <section className="section">
+          <div className="filters" style={{ gridTemplateColumns: '1.8fr 220px auto' }}>
+            <input className="input" placeholder="Поиск по документам..." />
+            <select className="select"><option>Все категории</option></select>
+            <button className="btn btn--primary">Найти</button>
+          </div>
+        </section>
+
+        <section className="section doc-layout">
+          <aside className="doc-sidebar">
+            <h2 className="section-title" style={{ fontSize: 26 }}>Категории</h2>
+            <div className="pills" style={{ flexDirection: 'column', marginTop: 18 }}>
+              {cats.map((cat, i) => <span key={cat} className={`pill ${i === 0 ? 'pill--active' : ''}`}>{cat}</span>)}
+            </div>
+          </aside>
+
+          <div className="cards-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+            {docs.map((title) => (
+              <article key={title} className="doc-card">
+                <div className="doc-card__top"><span className="badge badge--soft">Документ</span></div>
+                <h3>{title}</h3>
+                <p>Готовая форма для работы по строительным проектам и сопровождения сделок.</p>
+                <div className="doc-card__meta" style={{ marginTop: 18 }}><Link href="/request/document-request" className="doc-card__cta">Открыть</Link></div>
+              </article>
+            ))}
+          </div>
+
+          <aside className="doc-request">
+            <h2 className="section-title" style={{ fontSize: 26 }}>Получить документ</h2>
+            <p className="section-copy" style={{ fontSize: 17, marginTop: 10 }}>Заполните данные по задаче, и мы подготовим нужный документ под ваш кейс.</p>
+            <div style={{ marginTop: 18, display: 'grid', gap: 12 }}>
+              <input className="input" placeholder="Ваше имя" />
+              <input className="input" placeholder="Компания" />
+              <input className="input" placeholder="Договор / объект" />
+              <textarea className="textarea" placeholder="Кратко опишите задачу" />
+              <Link href="/request/document-request" className="btn btn--primary" style={{ width: '100%' }}>Отправить запрос</Link>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+  );
+}

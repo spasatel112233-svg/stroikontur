@@ -20,11 +20,11 @@ export default function FormPage({
         <Link href={back} className="back-link">← {backLabel}</Link>
         <section className="split-page" style={{ marginTop: 18 }}>
           <div className="split-side card">
-            <span className="page-tag" style={{ color: '#ffd8b3', borderColor: 'rgba(255,255,255,.15)', background: 'rgba(255,255,255,.08)' }}>{tag}</span>
-            <h1 className="section-title" style={{ color: 'white', marginTop: 18 }}>{sideTitle || title}</h1>
-            <p className="section-text" style={{ color: 'rgba(255,255,255,.78)' }}>{sideText || text}</p>
+            <span className="page-tag page-tag-light">{tag}</span>
+            <h1 className="section-title split-title">{sideTitle || title}</h1>
+            <p className="section-text split-text">{sideText || text}</p>
             {!!sideList.length && (
-              <ul>
+              <ul className="split-list">
                 {sideList.map((item) => <li key={item}>{item}</li>)}
               </ul>
             )}
@@ -34,8 +34,8 @@ export default function FormPage({
           </div>
           <div className="form-shell card">
             <span className="page-tag">{tag}</span>
-            <h2 className="section-title" style={{ marginTop: 16 }}>{title}</h2>
-            <p className="section-text">{text}</p>
+            <h2 className="section-title section-title-form">{title}</h2>
+            <p className="section-text section-text-form">{text}</p>
             <div className="form-grid" style={{ marginTop: 20 }}>
               {fields.map((field) => {
                 const className = field.full ? 'full' : '';

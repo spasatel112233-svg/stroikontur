@@ -16,7 +16,7 @@ export default function DisputesPage() {
           tag="Споры"
           title="Споры"
           text="Раздел с претензиями, актами, КС-2, КС-3, договорами, уведомлениями, заявлениями и жалобами для работы со спорными ситуациями между заказчиком и подрядчиком."
-          visual="legal"
+          visual="documents"
           actions={<><Link href="/request?mode=dispute" className="btn btn-primary">Разобрать ситуацию</Link><Link href="/documents" className="btn btn-secondary">Открыть документы</Link></>}
         />
         <section className="section">

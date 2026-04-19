@@ -11,9 +11,24 @@ const roles = [
 const categories = ['Монолит', 'Фасады', 'Отделка', 'Электрика', 'Благоустройство', 'Опиловка', 'Вывоз мусора', 'Аренда техники'];
 
 const orders = [
-  { badge: 'Срочно', title: 'Фасадные работы на жилом комплексе', text: 'Нужен подрядчик на утепление, облицовку и устройство мокрого фасада. Старт работ — в ближайшие 10 дней.', meta: 'Турция · от 38 млн ₽ · 4 месяца' },
-  { badge: 'Новый', title: 'Благоустройство и малые формы', text: 'Требуются дорожки, озеленение, освещение, ливневая система и монтаж малых архитектурных форм.', meta: 'Россия · от 9,5 млн ₽ · 45 дней' },
-  { badge: 'VIP', title: 'Инженерные сети производственного корпуса', text: 'Нужен подрядчик на внутренние сети, вентиляцию, автоматику и пусконаладочные работы.', meta: 'Казахстан · по договору · 2 этапа' }
+  {
+    badge: 'Срочно',
+    title: 'Фасадные работы на жилом комплексе',
+    text: 'Нужен подрядчик на утепление, облицовку и устройство мокрого фасада. Старт работ — в ближайшие 10 дней.',
+    meta: 'Турция · от 38 млн ₽ · 4 месяца'
+  },
+  {
+    badge: 'Новый',
+    title: 'Благоустройство и малые формы',
+    text: 'Требуются дорожки, озеленение, освещение, ливневая система и монтаж малых архитектурных форм.',
+    meta: 'Россия · от 9,5 млн ₽ · 45 дней'
+  },
+  {
+    badge: 'VIP',
+    title: 'Инженерные сети производственного корпуса',
+    text: 'Нужен подрядчик на внутренние сети, вентиляцию, автоматику и пусконаладочные работы.',
+    meta: 'Казахстан · по договору · 2 этапа'
+  }
 ];
 
 export default function HomePage() {
@@ -21,7 +36,7 @@ export default function HomePage() {
     <main className="page">
       <div className="container">
         <section className="hero-grid card">
-          <div className="hero-copy hero-copy-light">
+          <div className="hero-copy">
             <span className="hero-tag">Строительная платформа</span>
             <h1 className="hero-title">Единая платформа для заказов, подрядов, специалистов, компаний и документов</h1>
             <p className="hero-text">Помогаем находить исполнителей, размещать заказы, работать с документами и быстрее решать спорные вопросы по проектам.</p>
@@ -36,18 +51,8 @@ export default function HomePage() {
               <div className="hero-stat"><div className="hero-stat-value">200+</div><div className="hero-stat-label">объектов в работе и подборе</div></div>
             </div>
           </div>
-          <div className="hero-visual hero-photo-shell"><HeroVisual variant="bridge" title="Реальные объекты" subtitle="Стройка, техника, документы и команды в одной системе" /></div>
-        </section>
-
-        <section className="section section-video">
-          <div className="section-header">
-            <div>
-              <h2 className="section-title">Живая стройка и большие объекты</h2>
-              <p className="section-text">На главной оставляем живой строительный кадр и видеоблок по крупным объектам, технике и рабочему процессу. На мобильной версии при необходимости показываем статичный постер.</p>
-            </div>
-          </div>
-          <div className="video-showcase card">
-            <HeroVisual variant="bridge" video title="Большие стройки, техника и работа на объекте" subtitle="Видео без звука, с плавным затемнением и нормальной интеграцией в дизайн" />
+          <div className="hero-visual">
+            <HeroVisual variant="hero" />
           </div>
         </section>
 
@@ -77,7 +82,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="pill-row">
-            {categories.map((item, index) => <span className={`pill ${index === 0 ? 'pill-active' : ''}`} key={item}>{item}</span>)}
+            {categories.map((item, index) => (
+              <span className={`pill ${index === 0 ? 'pill-active' : ''}`} key={item}>{item}</span>
+            ))}
           </div>
         </section>
 
@@ -104,7 +111,9 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
-            <div className="visual-card card visual-card-tall visual-card-photo"><HeroVisual variant="team" title="Люди, техника и объект" subtitle="Живой строительный кадр вместо пустой абстракции" /></div>
+            <div className="visual-card card visual-card-tall">
+              <HeroVisual variant="handshake" />
+            </div>
           </div>
         </section>
 
@@ -112,28 +121,28 @@ export default function HomePage() {
           <div className="actions-grid">
             <div className="card card-split" style={{ overflow: 'hidden', minHeight: '100%' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '100%' }}>
-                <div className="split-side split-side-copy" style={{ borderRadius: 0 }}>
-                  <span className="page-tag" style={{ color: '#ffd8b3', borderColor: 'rgba(255,255,255,.15)', background: 'rgba(255,255,255,.08)' }}>Проекты и чертежи</span>
-                  <h2 className="section-title" style={{ color: 'white', marginTop: 16 }}>Загрузите проект или чертёж и получите наглядную визуализацию</h2>
-                  <p className="section-text" style={{ color: 'rgba(255,255,255,.78)' }}>Рабочие материалы переводятся в понятный визуальный формат для согласования, обсуждения и презентации проекта.</p>
+                <div className="split-side" style={{ borderRadius: 0 }}>
+                  <span className="page-tag page-tag-light">Проекты и чертежи</span>
+                  <h2 className="section-title split-title">Загрузите проект или чертёж и получите наглядную визуализацию</h2>
+                  <p className="section-text split-text">Рабочие материалы переводятся в понятный визуальный формат для согласования, обсуждения и презентации проекта.</p>
                   <div className="hero-actions">
                     <Link href="/request?mode=project" className="btn btn-primary">Загрузить проект</Link>
                     <Link href="/request?mode=drawing" className="btn btn-secondary">Загрузить чертёж</Link>
                   </div>
                 </div>
-                <div className="visual-card visual-card-photo" style={{ borderRadius: 0 }}><HeroVisual variant="bridge" title="Крупные объекты" subtitle="Визуализация, подача и согласование" /></div>
+                <div className="visual-card" style={{ borderRadius: 0 }}><HeroVisual variant="site" /></div>
               </div>
             </div>
             <div className="info-grid" style={{ gridTemplateColumns: '1fr' }}>
               <div className="feature-card card">
-                <h3 className="card-subtitle">Документы по объектам и рабочим ситуациям</h3>
+                <h3 className="card-subtitle">Документы, споры и документы по объекту</h3>
                 <p className="card-text">Шаблоны договоров, актов, КС-2, КС-3, претензий и других документов для работы с заказчиком и подрядчиком.</p>
                 <div className="card-actions"><Link href="/documents" className="btn btn-secondary">Открыть документы</Link><Link href="/disputes" className="btn btn-primary">Решить спор</Link></div>
               </div>
               <div className="feature-card card">
                 <h3 className="card-subtitle">Сметы и расчёты</h3>
                 <p className="card-text">Подготовка смет, рабочих расчётов и предварительная оценка рентабельности работ и участия в проекте.</p>
-                <div className="card-actions"><Link href="/request?mode=document" className="btn btn-primary">Рассчитать смету</Link></div>
+                <div className="card-actions"><Link href="/documents" className="btn btn-primary">Рассчитать смету</Link></div>
               </div>
             </div>
           </div>

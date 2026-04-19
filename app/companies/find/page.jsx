@@ -22,7 +22,7 @@ export default function FindCompanyPage() {
         { type: 'textarea', placeholder: 'Кратко опишите объект и требования к компании', full: true, name: 'description' }
       ]}
       cta="Найти компанию"
-      visual="company"
+      visual="team"
     />
   );
 }

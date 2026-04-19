@@ -16,7 +16,7 @@ export default function CompaniesPage() {
           tag="Компании"
           title="Компании"
           text="Профили подрядных и сервисных компаний с направлениями работ, регионами, опытом и контактами для входящих запросов."
-          visual="company"
+          visual="team"
           actions={<><Link href="/companies/find" className="btn btn-primary">Найти компанию</Link><Link href="/register" className="btn btn-secondary">Создать профиль</Link></>}
         />
         <section className="section section-soft">

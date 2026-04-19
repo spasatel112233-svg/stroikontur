@@ -21,7 +21,7 @@ export default function ContactCompanyPage() {
         { type: 'textarea', placeholder: 'Опишите объект и задачу для компании', full: true, name: 'description' }
       ]}
       cta="Связаться с компанией"
-      visual="company"
+      visual="team"
     />
   );
 }

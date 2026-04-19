@@ -48,8 +48,8 @@ export default function OrdersPage() {
                 <p className="card-text">{card.text}</p>
                 <div className="meta">{card.meta}</div>
                 <div className="card-actions card-actions-bottom">
-                  <Link href="/orders/create" className="btn btn-secondary">Подробнее</Link>
-                  <Link href="/orders/create" className="btn btn-primary">Откликнуться</Link>
+                  <Link href="/request?mode=contractor" className="btn btn-secondary">Подробнее</Link>
+                  <Link href="/request?mode=contractor" className="btn btn-primary">Откликнуться</Link>
                 </div>
               </article>
             ))}

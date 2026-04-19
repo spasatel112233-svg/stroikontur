@@ -1,46 +1,46 @@
-const PHOTO_MAP = {
-  site: '/images/hero-crane.jpg',
-  team: '/images/workers.jpg',
-  bridge: '/images/hero-crane.jpg',
-  documents: '/images/gavel.jpg',
-  company: '/images/workers.jpg',
-  legal: '/images/gavel.jpg',
+const variants = {
+  hero: {
+    image: '/hero.jpg',
+    label: 'Масштабные объекты',
+    caption: 'Стройка, подряд, техника и реальные объекты'
+  },
+  team: {
+    image: '/handshake.jpg',
+    label: 'Компании и команды',
+    caption: 'Работа с подрядчиками, специалистами и входящими запросами'
+  },
+  site: {
+    image: '/hero.jpg',
+    label: 'Строительные работы',
+    caption: 'Подряды, поставки, объектные задачи'
+  },
+  documents: {
+    image: '/hero.jpg',
+    label: 'Документы и сопровождение',
+    caption: 'Шаблоны, акты, споры и рабочие кейсы'
+  },
+  handshake: {
+    image: '/handshake.jpg',
+    label: 'Люди на объекте',
+    caption: 'Связь, договорённости и работа на площадке'
+  }
 };
 
-export default function HeroVisual({ variant = 'site', title, subtitle, video = false }) {
-  const src = PHOTO_MAP[variant] || PHOTO_MAP.site;
-
-  if (video) {
-    return (
-      <div className={`photo-visual photo-visual-${variant} photo-video-shell`}>
-        <video
-          className="photo-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={src}
-        >
-          <source src="https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4" type="video/mp4" />
-        </video>
-        <div className="photo-overlay" />
-        {(title || subtitle) ? (
-          <div className="visual-copy">
-            {title ? <h3>{title}</h3> : null}
-            {subtitle ? <p>{subtitle}</p> : null}
-          </div>
-        ) : null}
-      </div>
-    );
-  }
+export default function HeroVisual({ variant = 'hero' }) {
+  const current = variants[variant] || variants.hero;
 
   return (
-    <div className={`photo-visual photo-visual-${variant}`} style={{ backgroundImage: `url(${src})` }}>
-      <div className="photo-overlay" />
-      {(title || subtitle) ? (
-        <div className="visual-copy">
-          {title ? <h3>{title}</h3> : null}
-          {subtitle ? <p>{subtitle}</p> : null}
+    <div className={`visual-scene visual-${variant}`}>
+      <div className="visual-image" style={{ backgroundImage: `url(${current.image})` }} />
+      <div className="visual-overlay" />
+      <div className="visual-panel">
+        <span className="visual-chip">{current.label}</span>
+        <div className="visual-caption">{current.caption}</div>
+      </div>
+      {variant === 'hero' ? (
+        <div className="visual-video-badge">
+          <span className="play-dot">▶</span>
+          <span>Видео стройки</span>
         </div>
       ) : null}
     </div>

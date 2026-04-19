@@ -14,10 +14,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand">
-          <span className="brand-mark brand-mark-logo" aria-hidden="true">
-            <span className="brand-frame" />
-            <span className="brand-letter">СК</span>
-          </span>
+          <span className="brand-mark brand-mark-logo"><span className="brand-letter">СК</span></span>
           <span>СтройКонтур</span>
         </Link>
 
@@ -28,9 +25,9 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <Link href="/login" className="btn btn-header-secondary">Войти</Link>
-          <Link href="/register" className="btn btn-dark">Регистрация</Link>
-          <Link href="/request" className="btn btn-primary btn-header-primary">Оставить заявку</Link>
+          <Link href="/login" className="btn btn-header-secondary btn-header-small">Войти</Link>
+          <Link href="/register" className="btn btn-dark btn-header-small">Регистрация</Link>
+          <Link href="/request" className="btn btn-primary btn-header-primary btn-header-compact">Оставить заявку</Link>
         </div>
       </div>
     </header>

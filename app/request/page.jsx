@@ -51,7 +51,6 @@ const modes = {
     sideList: ['Укажите объект и предмет документа', 'Опишите ситуацию', 'Уточните сроки и участников'],
     cta: 'Запросить документ',
     visual: 'disputes',
-    size: 'compact',
     size: 'medium',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },
@@ -69,7 +68,7 @@ const modes = {
     sideText: 'Форма подходит для неоплаты, неподписанных актов, отказа в приёмке, спора по объёму или качеству работ.',
     sideList: ['Кратко опишите спор', 'Укажите объект и стадию работ', 'Добавьте, какие документы уже есть'],
     cta: 'Разобрать ситуацию',
-    visual: 'documents',
+    visual: 'disputes',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -86,7 +85,6 @@ const modes = {
     sideList: ['Добавьте краткое описание проекта', 'Укажите стадию и формат', 'После отправки свяжемся для уточнения деталей'],
     cta: 'Загрузить проект',
     visual: 'site',
-    size: 'medium',
     size: 'medium',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },

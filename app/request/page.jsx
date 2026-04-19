@@ -10,7 +10,7 @@ const modes = {
     sideList: ['Можно описать объект и задачу', 'Подходит для заказчиков, подрядчиков и компаний', 'Запрос уходит в нужный сценарий обработки'],
     cta: 'Отправить заявку',
     visual: 'request',
-    size: 'large',
+    size: 'wide',
     fields: [
       { label: 'Кто вы?', type: 'select', placeholder: 'Заказчик', full: true, name: 'role' },
       { placeholder: 'Имя / компания', full: true, name: 'name' },
@@ -30,7 +30,7 @@ const modes = {
     sideList: ['Укажите направление работ', 'Добавьте сроки и регион', 'Опишите объём, бюджет и формат сотрудничества'],
     cta: 'Отправить запрос',
     visual: 'company',
-    size: 'large',
+    size: 'medium',
     fields: [
       { placeholder: 'Название компании / заказчика', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -50,8 +50,9 @@ const modes = {
     sideText: 'Подходит для актов, КС-2, КС-3, претензий, уведомлений, договоров и других рабочих форм по объекту.',
     sideList: ['Укажите объект и предмет документа', 'Опишите ситуацию', 'Уточните сроки и участников'],
     cta: 'Запросить документ',
-    visual: 'documents',
+    visual: 'disputes',
     size: 'compact',
+    size: 'medium',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },
       { placeholder: 'Компания', full: true, name: 'company' },
@@ -69,7 +70,6 @@ const modes = {
     sideList: ['Кратко опишите спор', 'Укажите объект и стадию работ', 'Добавьте, какие документы уже есть'],
     cta: 'Разобрать ситуацию',
     visual: 'documents',
-    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -85,7 +85,8 @@ const modes = {
     sideText: 'Подходит для концепции, рабочей документации, альбомов и презентации объекта заказчику или команде.',
     sideList: ['Добавьте краткое описание проекта', 'Укажите стадию и формат', 'После отправки свяжемся для уточнения деталей'],
     cta: 'Загрузить проект',
-    visual: 'technique',
+    visual: 'site',
+    size: 'medium',
     size: 'medium',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
@@ -103,7 +104,6 @@ const modes = {
     sideList: ['Укажите раздел или тип чертежа', 'Опишите, что нужно получить на выходе', 'При необходимости добавьте комментарии'],
     cta: 'Загрузить чертёж',
     visual: 'site',
-    size: 'medium',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },

@@ -1,5 +1,4 @@
 import HeroVisual from './HeroVisual';
-
 export default function PageHero({ tag, title, text, actions, visual = 'site' }) {
   return (
     <section className="page-hero card">
@@ -9,9 +8,7 @@ export default function PageHero({ tag, title, text, actions, visual = 'site' })
         <p className="section-text section-text-hero">{text}</p>
         {actions ? <div className="hero-actions">{actions}</div> : null}
       </div>
-      <div className="page-hero-visual">
-        <HeroVisual variant={visual} />
-      </div>
+      <div className="page-hero-visual"><HeroVisual variant={visual} /></div>
     </section>
   );
 }

@@ -113,7 +113,7 @@ const modes = {
     sideText: 'Форма поддержки для всех вопросов по работе платформы и сопровождению пользователей.',
     sideList: ['Опишите, что нужно решить', 'Укажите контакт для обратной связи', 'При необходимости добавьте страницу или раздел'],
     cta: 'Отправить обращение',
-    visual: 'preview',
+    visual: 'support',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },
       { placeholder: 'Email', full: true, name: 'email' },

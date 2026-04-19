@@ -10,7 +10,7 @@ const modes = {
     sideList: ['Можно описать объект и задачу', 'Подходит для заказчиков, подрядчиков и компаний', 'Запрос уходит в нужный сценарий обработки'],
     cta: 'Отправить заявку',
     visual: 'request',
-    size: 'wide',
+    size: 'large',
     fields: [
       { label: 'Кто вы?', type: 'select', placeholder: 'Заказчик', full: true, name: 'role' },
       { placeholder: 'Имя / компания', full: true, name: 'name' },
@@ -85,8 +85,8 @@ const modes = {
     sideText: 'Подходит для концепции, рабочей документации, альбомов и презентации объекта заказчику или команде.',
     sideList: ['Добавьте краткое описание проекта', 'Укажите стадию и формат', 'После отправки свяжемся для уточнения деталей'],
     cta: 'Загрузить проект',
-    visual: 'site',
-    size: 'compact',
+    visual: 'technique',
+    size: 'medium',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -103,7 +103,7 @@ const modes = {
     sideList: ['Укажите раздел или тип чертежа', 'Опишите, что нужно получить на выходе', 'При необходимости добавьте комментарии'],
     cta: 'Загрузить чертёж',
     visual: 'site',
-    size: 'compact',
+    size: 'medium',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -119,7 +119,7 @@ const modes = {
     sideText: 'Форма поддержки для всех вопросов по работе платформы и сопровождению пользователей.',
     sideList: ['Опишите, что нужно решить', 'Укажите контакт для обратной связи', 'При необходимости добавьте страницу или раздел'],
     cta: 'Отправить обращение',
-    visual: 'support',
+    visual: 'preview',
     size: 'compact',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },

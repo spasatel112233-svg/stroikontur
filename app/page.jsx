@@ -39,7 +39,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <span className="hero-tag">Строительная платформа</span>
             <h1 className="hero-title">Единая платформа для заказов, подрядов, специалистов, компаний и документов</h1>
-            <p className="hero-text">Помогаем находить исполнителей, размещать заказы, работать с документами и быстрее решать спорные вопросы по проектам.</p>
+            <p className="hero-text">Помогаем находить исполнителей, размещать заказы, вести работу с документами, быстрее закрывать спорные вопросы и собирать всю коммуникацию по объекту в одной деловой системе.</p>
             <div className="hero-actions">
               <Link href="/orders/create" className="btn btn-primary">Разместить заказ</Link>
               <Link href="/documents" className="btn btn-secondary">Документы и споры</Link>
@@ -92,7 +92,7 @@ export default function HomePage() {
           <div className="section-header">
             <div>
               <h2 className="section-title">Заказы / Подряды</h2>
-              <p className="section-text">Здесь можно размещать и находить заказы, подряды, субподряды, коммерческие объекты, работы по благоустройству, поставкам, аренде и обслуживанию территорий.</p>
+              <p className="section-text">Здесь можно размещать и находить заказы, подряды, субподряды, коммерческие объекты, работы по благоустройству, поставкам, аренде техники и обслуживанию территорий без ощущения пустого каталога или перегруженного шаблона.</p>
             </div>
             <Link href="/orders" className="btn btn-primary">Все заказы</Link>
           </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
             </div>
             <div className="info-grid" style={{ gridTemplateColumns: '1fr' }}>
               <div className="feature-card card">
-                <h3 className="card-subtitle">Документы, споры и документы по объекту</h3>
+                <h3 className="card-subtitle">Документы, споры и сопровождение объекта</h3>
                 <p className="card-text">Шаблоны договоров, актов, КС-2, КС-3, претензий и других документов для работы с заказчиком и подрядчиком.</p>
                 <div className="card-actions"><Link href="/documents" className="btn btn-secondary">Открыть документы</Link><Link href="/disputes" className="btn btn-primary">Решить спор</Link></div>
               </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.04fr .96fr', minHeight: '100%' }}>
                 <div className="split-side" style={{ borderRadius: 0 }}>
                   <span className="page-tag page-tag-light">Видео и визуальная подача</span>
-                  <h2 className="section-title split-title">Качественный preview-блок вместо ломающегося видео</h2>
+                  <h2 className="section-title split-title">Качественный визуальный блок вместо пустого или ломающегося видео</h2>
                   <p className="section-text split-text">Мы оставляем сильную визуальную подачу, но убираем риск пустого или битого видео. Блок показывает качественный превью-визуал с подписью, акцентом и безопасным fallback.</p>
                   <div className="split-list">
                     <div>• подходит для главной страницы и презентации платформы</div>

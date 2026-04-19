@@ -10,6 +10,7 @@ const modes = {
     sideList: ['Можно описать объект и задачу', 'Подходит для заказчиков, подрядчиков и компаний', 'Запрос уходит в нужный сценарий обработки'],
     cta: 'Отправить заявку',
     visual: 'request',
+    size: 'wide',
     fields: [
       { label: 'Кто вы?', type: 'select', placeholder: 'Заказчик', full: true, name: 'role' },
       { placeholder: 'Имя / компания', full: true, name: 'name' },
@@ -29,6 +30,7 @@ const modes = {
     sideList: ['Укажите направление работ', 'Добавьте сроки и регион', 'Опишите объём, бюджет и формат сотрудничества'],
     cta: 'Отправить запрос',
     visual: 'company',
+    size: 'large',
     fields: [
       { placeholder: 'Название компании / заказчика', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -49,6 +51,7 @@ const modes = {
     sideList: ['Укажите объект и предмет документа', 'Опишите ситуацию', 'Уточните сроки и участников'],
     cta: 'Запросить документ',
     visual: 'documents',
+    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },
       { placeholder: 'Компания', full: true, name: 'company' },
@@ -66,6 +69,7 @@ const modes = {
     sideList: ['Кратко опишите спор', 'Укажите объект и стадию работ', 'Добавьте, какие документы уже есть'],
     cta: 'Разобрать ситуацию',
     visual: 'documents',
+    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -82,6 +86,7 @@ const modes = {
     sideList: ['Добавьте краткое описание проекта', 'Укажите стадию и формат', 'После отправки свяжемся для уточнения деталей'],
     cta: 'Загрузить проект',
     visual: 'site',
+    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -98,6 +103,7 @@ const modes = {
     sideList: ['Укажите раздел или тип чертежа', 'Опишите, что нужно получить на выходе', 'При необходимости добавьте комментарии'],
     cta: 'Загрузить чертёж',
     visual: 'site',
+    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя / компания', full: true, name: 'name' },
       { placeholder: 'Телефон', name: 'phone' },
@@ -114,6 +120,7 @@ const modes = {
     sideList: ['Опишите, что нужно решить', 'Укажите контакт для обратной связи', 'При необходимости добавьте страницу или раздел'],
     cta: 'Отправить обращение',
     visual: 'support',
+    size: 'compact',
     fields: [
       { placeholder: 'Ваше имя', full: true, name: 'name' },
       { placeholder: 'Email', full: true, name: 'email' },

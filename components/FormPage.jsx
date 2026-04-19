@@ -12,14 +12,15 @@ export default function FormPage({
   sideList = [],
   fields = [],
   cta = 'Отправить',
-  visual = 'site'
+  visual = 'site',
+  size = 'default'
 }) {
   return (
     <main className="page">
       <div className="container">
         <Link href={back} className="back-link">← {backLabel}</Link>
-        <section className="split-page" style={{ marginTop: 18 }}>
-          <div className="split-side card">
+        <section className={`split-page split-page-${size}`} style={{ marginTop: 18 }}>
+          <div className={`split-side card split-side-${size}`}>
             <span className="page-tag page-tag-light">{tag}</span>
             <h1 className="section-title split-title">{sideTitle || title}</h1>
             <p className="section-text split-text">{sideText || text}</p>
@@ -32,7 +33,7 @@ export default function FormPage({
               <HeroVisual variant={visual} />
             </div>
           </div>
-          <div className="form-shell card">
+          <div className={`form-shell card form-shell-${size}`}>
             <span className="page-tag">{tag}</span>
             <h2 className="section-title section-title-form">{title}</h2>
             <p className="section-text section-text-form">{text}</p>

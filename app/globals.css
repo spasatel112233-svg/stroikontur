@@ -1587,3 +1587,49 @@ body { background: #eef3f8; }
     background: linear-gradient(180deg, rgba(9,25,63,0) 0, rgba(9,25,63,0) 70px, #09193f 70px, #09193f 100%);
   }
 }
+
+
+/* v4 render-fix pass */
+.header-inner { gap: 18px; }
+.nav { gap: 20px; flex-wrap: wrap; }
+.header-actions { flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
+.visual-scene { min-height: 100%; }
+.visual-topline { position: absolute; top: 18px; left: 18px; right: 18px; display: flex; justify-content: flex-start; z-index: 3; }
+.visual-topline span { display: inline-flex; min-height: 34px; align-items: center; padding: 0 14px; border-radius: 999px; background: rgba(8,23,51,.52); border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.84); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(10px); }
+.visual-panel { left: 16px; right: 16px; bottom: 16px; width: auto; max-width: none; min-height: 118px; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px 22px 20px; background: linear-gradient(135deg, rgba(8,23,51,.86), rgba(8,23,51,.72)); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 18px 40px rgba(7,22,58,.22); }
+.visual-chip { margin-bottom: 10px; }
+.visual-caption { max-width: 100%; font-size: 17px; line-height: 1.55; }
+.visual-image { filter: saturate(1.03) contrast(1.02); }
+.page-hero { min-height: 360px; }
+.page-hero-copy { padding: 52px 44px; }
+.section-title-hero { font-size: clamp(42px, 4vw, 60px); line-height: 1.04; letter-spacing: -.03em; }
+.section-text-hero { font-size: 18px; line-height: 1.72; max-width: 650px; }
+.section-header { align-items: flex-end; gap: 18px; }
+.order-grid-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.order-grid-main .order-card { min-height: 404px; }
+.order-card .card-text, .specialist-card .card-text, .company-card .card-text, .doc-card .card-text, .feature-card .card-text { flex-grow: 1; }
+.order-card .card-actions, .specialist-card .card-actions, .company-card .card-actions { flex-direction: column; }
+.order-card .card-actions .btn, .specialist-card .card-actions .btn, .company-card .card-actions .btn, .feature-card .card-actions .btn { width: 100%; }
+.card-actions-bottom { gap: 10px; }
+.badge { min-height: 34px; padding: 0 12px; font-size: 12px; }
+.filter-bar { grid-template-columns: minmax(240px, 1.45fr) repeat(5, minmax(150px, 1fr)); align-items: stretch; }
+.filter-bar > * { min-width: 0; }
+.select-wrap, .search-input, .input, .textarea { overflow: hidden; }
+.select-wrap select { white-space: nowrap; text-overflow: ellipsis; }
+.split-page-large { grid-template-columns: minmax(360px, .86fr) minmax(540px, 1.14fr); }
+.split-page-wide { grid-template-columns: minmax(420px, 1fr) minmax(500px, 1fr); }
+.split-page-compact { grid-template-columns: minmax(360px, .98fr) minmax(420px, 1.02fr); }
+.split-side-large .split-visual-shell, .split-side-wide .split-visual-shell { min-height: 340px; }
+.form-shell-large { padding: 44px 40px; }
+.form-shell-wide { padding: 40px 36px; }
+.form-shell-compact { padding: 32px 30px; }
+.form-shell-compact .section-title-form { font-size: clamp(30px, 3vw, 38px); }
+.split-side-compact .split-visual-shell { min-height: 240px; }
+.card-split .split-side, .card-split .visual-card { min-height: 100%; }
+.footer-top-shell { grid-template-columns: 1.16fr .84fr; }
+.footer-top-copy { padding: 46px 42px; }
+.footer-top-visual .visual-panel { min-height: 132px; }
+.footer-grid { padding-top: 44px; }
+@media (max-width: 1280px) { .filter-bar { grid-template-columns: minmax(240px, 1.4fr) repeat(3, minmax(150px, 1fr)); } }
+@media (max-width: 1100px) { .order-grid-main, .filter-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filter-submit { grid-column: span 2; } }
+@media (max-width: 760px) { .page-hero-copy, .hero-copy, .footer-top-copy { padding: 28px 22px; } .visual-panel { left: 12px; right: 12px; bottom: 12px; min-height: 104px; padding: 18px 18px 16px; } .visual-caption { font-size: 15px; } .order-grid-main, .filter-bar { grid-template-columns: 1fr; } .filter-submit { grid-column: span 1; } }

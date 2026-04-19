@@ -3,85 +3,127 @@ const variants = {
     image: '/hero.jpg',
     label: 'Масштабные объекты',
     caption: 'Стройка, подряд, техника и реальные объекты на одной деловой платформе.',
-    tone: 'dark'
+    note: 'Объекты • подряды • сопровождение',
+    tone: 'dark',
+    position: 'center center',
+    size: 'cover'
   },
   site: {
     image: '/hero.jpg',
-    label: 'Строительные работы',
-    caption: 'Подряды, поставки, объектные задачи и этапы строительства без лишней путаницы.',
-    tone: 'dark'
+    label: 'Проекты и визуализация',
+    caption: 'Проекты, чертежи и презентация объекта через чистую визуальную подачу без пустых блоков.',
+    note: 'Проекты • чертежи • презентация',
+    tone: 'dark',
+    position: 'center center',
+    size: 'cover'
   },
   orders: {
-    image: '/hero.jpg',
+    image: '/media/contactsheet1.jpg',
     label: 'Заказы и подряды',
     caption: 'Размещение заявок, поиск исполнителей и ведение объектных запросов по этапам.',
-    tone: 'dark'
+    note: 'Заказы • подряд • поставки',
+    tone: 'warm',
+    position: 'center center',
+    size: 'cover'
   },
   machinery: {
     image: '/hero.jpg',
     label: 'Техника и объект',
     caption: 'Спецтехника, площадка, снабжение и выездные работы по строительным задачам.',
-    tone: 'dark'
+    note: 'Техника • мобилизация • объект',
+    tone: 'machinery',
+    position: '76% center',
+    size: 'cover'
   },
   team: {
     image: '/handshake.jpg',
     label: 'Компании и команды',
     caption: 'Работа с подрядчиками, специалистами, входящими запросами и партнёрствами.',
-    tone: 'warm'
+    note: 'Команда • подрядчик • контакт',
+    tone: 'warm',
+    position: 'center center',
+    size: 'cover'
   },
   specialists: {
     image: '/handshake.jpg',
     label: 'Специалисты и бригады',
     caption: 'Подбор людей, команд и исполнителей под объект, этап или направление работ.',
-    tone: 'warm'
+    note: 'Люди • бригады • подбор',
+    tone: 'warm',
+    position: 'left center',
+    size: 'cover'
   },
   company: {
-    image: '/handshake.jpg',
+    image: '/media/contact.jpeg',
     label: 'Компании и переговоры',
     caption: 'Профили компаний, деловой контакт, регионы работы и входящие заявки.',
-    tone: 'warm'
+    note: 'Компания • регион • переговоры',
+    tone: 'soft',
+    position: 'center center',
+    size: 'cover'
   },
   handshake: {
     image: '/handshake.jpg',
     label: 'Люди на объекте',
     caption: 'Связь, договорённости и сопровождение объекта от первого контакта до запуска работ.',
-    tone: 'warm'
+    note: 'Контакт • договорённость • выход',
+    tone: 'warm',
+    position: 'center center',
+    size: 'cover'
   },
   documents: {
     image: '/media/gavel.jpg',
     label: 'Документы и сопровождение',
     caption: 'Договоры, акты, КС-2, КС-3, претензии, споры и рабочие правовые сценарии.',
-    tone: 'dark'
+    note: 'Договоры • акты • претензии',
+    tone: 'dark',
+    position: 'center center',
+    size: 'cover'
   },
   dispute: {
     image: '/media/gavel.jpg',
     label: 'Споры и защита позиции',
     caption: 'Разбор неоплаты, неподписанных актов и спорных вопросов по объекту.',
-    tone: 'dark'
+    note: 'Спор • позиция • защита',
+    tone: 'dark',
+    position: 'center center',
+    size: 'cover'
   },
   request: {
     image: '/media/contact.jpeg',
     label: 'Заявка на платформу',
     caption: 'Единая точка входа для заказчика, подрядчика, компании или специалиста.',
-    tone: 'soft'
+    note: 'Старт • связь • распределение',
+    tone: 'soft',
+    position: 'center center',
+    size: 'cover'
   },
   support: {
     image: '/media/contact.jpeg',
     label: 'Поддержка и связь',
     caption: 'Быстрый контакт по работе платформы, профилям, документам и размещению.',
-    tone: 'soft'
+    note: 'Поддержка • ответы • помощь',
+    tone: 'soft',
+    position: 'center center',
+    size: 'cover'
   },
   preview: {
-    image: '/media/contact.jpeg',
+    image: '/media/contactsheet1.jpg',
     label: 'Презентация сервиса',
-    caption: 'Подача платформы через чистый визуал, понятную структуру и уверенный бизнес-стиль.',
-    tone: 'soft'
+    caption: 'Подача платформы через сильный визуал, понятную структуру и уверенный деловой стиль.',
+    note: 'Сервис • подача • доверие',
+    tone: 'video',
+    position: 'center center',
+    size: 'cover'
   },
   video: {
     image: '/media/contactsheet1.jpg',
     label: 'Видео-презентация',
-    caption: 'Безопасный preview-блок с fallback, чтобы визуальная подача не ломалась на странице.',
-    tone: 'video'
+    caption: 'Превью-блок с сильной подачей и безопасным fallback, чтобы секция не выглядела пустой.',
+    note: 'Preview • fallback • презентация',
+    tone: 'video',
+    position: 'center center',
+    size: 'cover'
   }
 };
 
@@ -89,18 +131,16 @@ export default function HeroVisual({ variant = 'hero' }) {
   const current = variants[variant] || variants.hero;
 
   return (
-    <div className={`visual-scene visual-${current.tone || 'dark'}`}>
-      <div className="visual-image" style={{ backgroundImage: `url(${current.image})` }} />
+    <div className={`visual-scene visual-${current.tone || 'dark'} visual-${variant}`}>
+      <div className="visual-image" style={{ backgroundImage: `url(${current.image})`, backgroundPosition: current.position || 'center center', backgroundSize: current.size || 'cover' }} />
       <div className="visual-overlay" />
+      <div className="visual-topline"><span>{current.note}</span></div>
       <div className="visual-panel">
         <span className="visual-chip">{current.label}</span>
         <div className="visual-caption">{current.caption}</div>
       </div>
       {(variant === 'hero' || variant === 'video') ? (
-        <div className="visual-video-badge">
-          <span className="play-dot">▶</span>
-          <span>{variant === 'video' ? 'Preview с fallback' : 'Видео стройки'}</span>
-        </div>
+        <div className="visual-video-badge"><span className="play-dot">▶</span><span>{variant === 'video' ? 'Плейсхолдер видео' : 'Видео стройки'}</span></div>
       ) : null}
     </div>
   );

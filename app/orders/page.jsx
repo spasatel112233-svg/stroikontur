@@ -20,10 +20,11 @@ export default function OrdersPage() {
           tag="Заказы / Подряды"
           title="Заказы / Подряды"
           text="Размещайте и находите заказы, подряды, субподряды, коммерческие объекты, работы по благоустройству, поставкам, аренде и обслуживанию территорий."
+          visual="site"
           actions={
             <>
               <Link href="/orders/create" className="btn btn-primary">Разместить заказ</Link>
-              <Link href="/request" className="btn btn-secondary">Найти подрядчика</Link>
+              <Link href="/request?mode=contractor" className="btn btn-secondary">Найти подрядчика</Link>
             </>
           }
         />
@@ -43,10 +44,10 @@ export default function OrdersPage() {
             {cards.map((card) => (
               <article key={card.title} className="order-card card">
                 <span className="badge">{card.badge}</span>
-                <h3 className="card-subtitle" style={{ marginTop: 18 }}>{card.title}</h3>
+                <h3 className="card-subtitle card-title-compact">{card.title}</h3>
                 <p className="card-text">{card.text}</p>
                 <div className="meta">{card.meta}</div>
-                <div className="card-actions">
+                <div className="card-actions card-actions-bottom">
                   <Link href="/orders/create" className="btn btn-secondary">Подробнее</Link>
                   <Link href="/orders/create" className="btn btn-primary">Откликнуться</Link>
                 </div>

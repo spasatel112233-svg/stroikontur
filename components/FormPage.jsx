@@ -11,7 +11,8 @@ export default function FormPage({
   sideText,
   sideList = [],
   fields = [],
-  cta = 'Отправить'
+  cta = 'Отправить',
+  visual = 'site'
 }) {
   return (
     <main className="page">
@@ -27,7 +28,9 @@ export default function FormPage({
                 {sideList.map((item) => <li key={item}>{item}</li>)}
               </ul>
             )}
-            <HeroVisual />
+            <div className="split-visual-shell">
+              <HeroVisual variant={visual} />
+            </div>
           </div>
           <div className="form-shell card">
             <span className="page-tag">{tag}</span>
@@ -51,7 +54,7 @@ export default function FormPage({
               })}
             </div>
             <div className="form-footer">
-              <button className="btn btn-primary">{cta}</button>
+              <button className="btn btn-primary btn-form-primary">{cta}</button>
             </div>
             <p className="footer-note">Данные используются только для обработки запроса и связи по вашему обращению.</p>
           </div>

@@ -17,6 +17,7 @@ export default function SpecialistsPage() {
           tag="Специалисты"
           title="Специалисты"
           text="Находите специалистов по строительным, инженерным, сметным и эксплуатационным направлениям без лишней путаницы и длинных переписок."
+          visual="team"
           actions={
             <>
               <Link href="/specialists/find" className="btn btn-primary">Найти специалиста</Link>
@@ -33,11 +34,11 @@ export default function SpecialistsPage() {
           <div className="specialist-grid">
             {specialists.map((person) => (
               <article className="specialist-card card" key={person.title}>
-                <div className="avatar">{person.initials}</div>
-                <h3 className="card-subtitle">{person.title}</h3>
-                <p className="card-text">{person.text}</p>
-                <div className="meta">{person.meta}</div>
-                <div className="card-actions">
+                <div className="avatar avatar-soft">{person.initials}</div>
+                <h3 className="card-subtitle card-subtitle-soft">{person.title}</h3>
+                <p className="card-text card-text-soft">{person.text}</p>
+                <div className="meta meta-soft">{person.meta}</div>
+                <div className="card-actions card-actions-bottom">
                   <Link href="/specialists/find" className="btn btn-secondary">Подробнее</Link>
                   <Link href={`/specialists/contact?profile=${encodeURIComponent(person.title)}`} className="btn btn-primary">Связаться</Link>
                 </div>

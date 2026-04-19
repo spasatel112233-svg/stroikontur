@@ -14,7 +14,10 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand">
-          <span className="brand-mark" />
+          <span className="brand-mark brand-mark-logo" aria-hidden="true">
+            <span className="brand-frame" />
+            <span className="brand-letter">СК</span>
+          </span>
           <span>СтройКонтур</span>
         </Link>
 

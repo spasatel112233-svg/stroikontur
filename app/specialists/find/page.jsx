@@ -8,21 +8,22 @@ export default function FindSpecialistPage() {
       tag="Поиск специалиста"
       title="Найти специалиста"
       text="Опишите, какой специалист вам нужен, по какому направлению, в каком регионе и на каких условиях."
-      sideText="Форма подходит для поиска прорабов, инженеров, сметчиков, бригад, монтажников и узких специалистов под конкретную задачу."
-      sideList={['Укажите специальность и формат работы', 'Добавьте регион, сроки и краткое описание', 'Запрос будет передан в подходящие карточки']}
+      sideText="Подходит для поиска прораба, сметчика, инженерной команды, специалистов по фасадам, отделке, сетям и другим направлениям."
+      sideList={['Укажите специальность и регион', 'Опишите формат и сроки работы', 'Добавьте требования к опыту и квалификации']}
       fields={[
-        { label: 'Кто вы?', type: 'select', placeholder: 'Заказчик / компания', full: true, name: 'role' },
+        { label: 'Кто вы?', type: 'select', placeholder: 'Компания / заказчик', full: true, name: 'role' },
         { placeholder: 'Имя / компания', full: true, name: 'name' },
         { placeholder: 'Телефон', name: 'phone' },
         { placeholder: 'Email', name: 'email' },
         { placeholder: 'Страна', name: 'country' },
         { placeholder: 'Город / регион', name: 'city' },
-        { placeholder: 'Нужная специальность', name: 'speciality' },
-        { type: 'select', placeholder: 'Формат работы', name: 'format' },
-        { placeholder: 'Опыт / квалификация', full: true, name: 'level' },
-        { type: 'textarea', placeholder: 'Кратко опишите задачу и требования', full: true, name: 'description' }
+        { type: 'select', placeholder: 'Нужная специальность', full: true, name: 'speciality' },
+        { placeholder: 'Формат работы', name: 'format' },
+        { placeholder: 'Опыт / квалификация', name: 'experience' },
+        { type: 'textarea', placeholder: 'Кратко опишите задачу', full: true, name: 'description' }
       ]}
       cta="Отправить запрос"
+      visual="team"
     />
   );
 }
